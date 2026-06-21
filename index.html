@@ -85,6 +85,39 @@ particlesJS("particles-js", {
   z-index: -1;
 }
 </style>
+ <button onclick="toggleMode()" id="theme-btn">
+    🌙 Dark / Light Mode
+</button>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("light-mode");
+}
+</script>
+
+<style>
+body {
+    background-color: #121212;
+    color: white;
+    transition: 0.5s;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+#theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+</style>
 </body>
   
 </html>
