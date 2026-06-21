@@ -42,6 +42,33 @@
             </a>
         </p>
     </section>
+  <section id="ask-question">
+        <h2>Ask Me a Question</h2>
+
+        <textarea id="message"
+            placeholder="Type your question here..."
+            rows="5" cols="40"></textarea>
+        <br><br>
+
+        <button onclick="sendToWhatsApp()">Send on WhatsApp</button>
+    </section>
+
+    <script>
+    function sendToWhatsApp() {
+        let message = document.getElementById("message").value;
+
+        if (message.trim() === "") {
+            alert("Please enter a message!");
+            return;
+        }
+
+        let whatsappURL =
+            "https://wa.me/916381768058?text=" +
+            encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank");
+    }
+    </script>
      <section id="visitors">
         <h2>Visitors</h2>
 
